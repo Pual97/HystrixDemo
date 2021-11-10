@@ -9,7 +9,7 @@ import java.util.TimerTask;
  * @author: pual(xuyi)
  * @create: 2021-11-10 15:50
  **/
-public class OpenState extends AbstractBreakerState {
+public class  OpenState extends AbstractBreakerState {
 
     public OpenState(BreakManager breakManager) {
         super(breakManager);

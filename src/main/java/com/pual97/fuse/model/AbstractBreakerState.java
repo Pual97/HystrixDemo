@@ -15,10 +15,17 @@ public abstract class AbstractBreakerState {
     /**
      * Judge the fuse state before invoke
      */
-    public void isFuseNow(){
-        if (breakManager.isOpen()){
-            throw new RuntimeException("服务已经熔断，稍后重试！");
+    public boolean isFuseNow(){
+        try {
+            breakManager.lock.lock();
+            if (breakManager.isOpen()){
+                return true;
+            }
+            return false;
+        }finally {
+            breakManager.lock.unlock();
         }
+
     }
 
     /**

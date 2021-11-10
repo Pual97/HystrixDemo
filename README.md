@@ -1,1 +1,1 @@
-###A Demo with Spring MVC 4 and Hystrix
+###A Demo To Implement Fuse By State Mode 

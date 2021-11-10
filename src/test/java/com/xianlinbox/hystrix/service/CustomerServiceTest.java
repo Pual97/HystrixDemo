@@ -1,6 +1,5 @@
 package com.xianlinbox.hystrix.service;
 
-import com.xianlinbox.hystrix.model.Customer;
 import org.junit.Before;
 import org.junit.Test;
 
